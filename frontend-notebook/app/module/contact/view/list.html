@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <p class="text-center" style="margin-top: 5%;">
+            <button type="button" class="btn btn-sm btn-success" ng-click="vm.showModal()">
+                <i class="fa fa-file-o"></i>
+                Novo Contato
+            </button>
+        </p>
+
+        <p style="margin-bottom: 5%;">
+            <table ng-table="vm.contactsTable" class="table table-condensed table-hover table-striped">
+                <tr ng-repeat="contact in $data">
+                    <td class="col-md-1 text-center" title="'Codigo'">
+                        {{contact.codigo}}
+                    </td>
+                    <td class="col-md-8" title="'Nome'">
+                        {{contact.nome}}
+                    </td>
+                    <td class="col-md-1 text-center" title="'Idade'">
+                        {{contact.idade}}
+                    </td>
+                    <td class="col-md-1 text-center" title="'Ação'">
+                        <button class="btn btn-sm btn-warning" ng-click="vm.showModal(contact._id)">
+                            <i class="fa fa-pencil"></i>
+                        </button>
+
+                        <button class="btn btn-sm btn-danger" ng-click="vm.removeContact(contact._id)">
+                            <i class="fa fa-remove"></i>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </p>
+    </div>
+    <div class="col-lg-3"></div>
+</div>

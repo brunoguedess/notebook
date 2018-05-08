@@ -1,0 +1,46 @@
+<div class="headerTitle">
+    <h2 class="text-center">
+        <i class="fa fa-address-book-o"></i>
+        Notebook - AngularJS
+    </h2>
+</div>
+
+<nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+        <li class="nav-item" ui-sref-active="active">
+            <a class="nav-link" ui-sref="home">
+                <i class="fa fa-home"></i>
+            </a>
+        </li>
+
+        <li class="nav-item" ui-sref-active="active">
+            <a class="nav-link" ui-sref="list">
+                <i class="fa fa-address-book-o"></i>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav" style="float: right;" ng-controller="AuthController as vm">
+        <li class="dropdown" ui-sref-active="active">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-user-circle-o"></i> {{vm.user.name}}
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-right">
+                <!-- User image -->
+                <li class="user-header">
+                    <img src="/asset/image/user.jpg" class="img-circle" alt="User Image">
+
+                    <p style="padding: 5%;">
+                        {{vm.user.name}} <br>
+                        <small>{{vm.user.email}}</small>
+                    </p>
+                </li>
+
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                    <a href="#" class="btn btn-default btn-flat" ng-click="vm.logout();">Sair</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>

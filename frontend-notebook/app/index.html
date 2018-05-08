@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="notebook">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Notebook</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="shortcut icon" href="">
+
+    <link rel="stylesheet" href="/asset/css/deps.min.css"></link>
+    <link rel="stylesheet" href="/asset/css/app.min.css"></link>
+    
+</head>
+
+<body>
+    <div>
+        <header ng-include="'/template/header.html'"></header>
+
+        <main role="main" class="container-fluid" ui-view="">
+            <div ui-view="book-layout"></div>
+        </main>
+
+        <footer ng-include="'/template/footer.html'"></footer>
+    </div>
+    
+    <script src="/asset/js/deps.min.js"></script>
+    <script src="/asset/js/app.min.js"></script>
+</body>
+
+</html>
